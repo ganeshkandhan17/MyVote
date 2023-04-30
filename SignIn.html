@@ -29,7 +29,7 @@ body{
   text-align: center;
   filter: blur();
 }
-input[type=text], input[type=password] {
+input {
   width:85%;
   height: 40px;
   margin-top:25px;
@@ -39,7 +39,7 @@ input[type=text], input[type=password] {
   outline: none;
   border-radius:15px;
 }
-input[type=text]:focus, input[type=password]:focus {
+input:focus {
   background-color: #ddd;
   outline: none;
   border-radius:10px;
@@ -52,19 +52,23 @@ button{
   margin-top:25px;
   border:none;
 }
+a{
+  text-decoration:none;
+  color: black;
+}
 </style>
 </head>
 <body>
   <div class="row">
     <div class="col-xl-6">
       <div id="box1">
-        <h1 style="margin-top: 20px; color: white;">SIGN IN</h1>
+        <h1 style="margin-top: 20px; color: white;">Sign In</h1>
         <form type="submit" method="post">
-          <input type="text" placeholder="Phone Number">
-          <input style="margin-top: 20px;"type="password" placeholder="Password"><br>
-          <button style="margin-top:35px"type="submit">Sign In</button>
-          <button style="margin-top:15px; width:170px;" type="submit">Forget password</button><br>
-          <button style="margin-top:15px; width:140px;" type="submit">Sign Up</button>
+          <input type="text" placeholder="Phone Number" required>
+          <input style="margin-top: 20px;" type="password" placeholder="Password" required><br>
+          <button style="margin-top:35px" type="submit"><a href="unconspage.html">Sign In</button>
+          <button style="margin-top:15px; width:170px;" type="submit"><a href="unconspage.html">Forget Password</button><br>
+          <button style="margin-top:15px; width:140px;" type="submit"><a href="SignUp.html">Sign Up</button>
         </form>
       </div>
       </div>
