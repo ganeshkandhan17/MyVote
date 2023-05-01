@@ -1,5 +1,4 @@
 <?php
-echo "all fine";
 $number = $_POST['number'];
 $email  = $_POST['email'];
 $password = $_POST['password'];
@@ -7,7 +6,7 @@ $confirmpassword = $_POST['confirmpassword'];
 
 
 
-
+if($password==$confirmpassword){
 if (!empty($number) || !empty($email) || !empty($password) || !empty($confirmpassword) )
 {
 
@@ -56,7 +55,11 @@ else{
      $conn->close();
     }
 } else {
-  function_alert("All fields are required");
+  echo "<script>alert('All fields are required');</script>";
  die();
+}
+}
+else{
+  echo "<script>alert('Password And Confirm password are not same');</script>";
 }
 ?>

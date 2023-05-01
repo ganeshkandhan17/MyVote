@@ -10,6 +10,20 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 <!-- BOOTSTRAP END -->
+<script>
+  function validate(){
+    let pass=document.getElementById("pass").value;
+    let conpass=document.getElementById("conpass").value;
+    if(pass==conpass){
+      return true;
+    }
+    else{
+      alert("Password and Confirm password are not same");
+      return false;
+    }
+  }
+</script>
+
 <style>
 body{
     position: relative;
@@ -61,11 +75,11 @@ a{
     <div class="col-xl-6">
       <div id="box1">
         <h1 style="margin-top: 20px; color: white;">Sign Up</h1>
-        <form action="register.php" method="post">
-          <input type="text" name="number" placeholder="Phone Number">
-          <input style="margin-top: 10px;" name="email" type="email" placeholder="Email">
-          <input style="margin-top: 10px;" name="password" type="password" placeholder="Password" >
-          <input style="margin-top: 10px;" name="confirmpassword" type="password" placeholder="Confirm Password"><br>
+        <form action="register.php" method="post" onsubmit="return validate()">
+          <input type="text" name="number" placeholder="Phone Number" required>
+          <input style="margin-top: 10px;" name="email" type="email" placeholder="Email" required>
+          <input style="margin-top: 10px;" name="password" type="password" id="pass" placeholder="Password" required >
+          <input style="margin-top: 10px;" name="confirmpassword" type="password" id="conpass" placeholder="Confirm Password" required><br>
           <button style="margin-top:35px; width:200px;" name="submit" type="submit">Sign Up</button><br>
         </form>
         <a href="SignIn.html"><button style="margin-top:15px; width:170px;">Sign In</button></a>
