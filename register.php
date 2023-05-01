@@ -44,7 +44,7 @@ else{
       $stmt = $conn->prepare($INSERT);
       $stmt->bind_param("ssss", $number,$email,$password,$confirmpassword);
       $stmt->execute();
-      header("Location: sign in.html");
+      header("Location: SignIn.html");
       exit;
      } else {
       function function_alert($message){
@@ -56,7 +56,7 @@ else{
      $conn->close();
     }
 } else {
- echo "All field are required";
+  function_alert("All fields are required");
  die();
 }
 ?>
