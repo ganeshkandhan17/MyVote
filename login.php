@@ -7,7 +7,7 @@ $con=mysqli_connect("sql312.epizy.com","epiz_34111150","uhrUzEhmDiwG7F","epiz_34
 
 //user name password receive login page
 
-$usertrim= trim($_POST['number']);
+$usertrim= trim($_POST['email']);
 
 $userstrip=stripcslashes($usertrim);
 $finaluser = htmlspecialchars($userstrip);
@@ -21,12 +21,12 @@ $finalpass = htmlspecialchars($passstrip);
 
 //comparision user input and data base
 
-$sql = "SELECT * FROM register where number='$finaluser' AND password = '$finalpass'";
+$sql = "SELECT * FROM register where email='$finaluser' AND confirmpassword = '$finalpass'";
 
 //sql request excuted
 $result = mysqli_query($con,$sql);
 
-//if number of row isgreatervthan o there is number and passwword
+//if number of row isgreatervthan o there is username and passwword
 
 // match is found else is not found
 
