@@ -1,5 +1,5 @@
 <?php
-
+echo "all fine";
 $number = $_POST['number'];
 $email  = $_POST['email'];
 $password = $_POST['password'];
