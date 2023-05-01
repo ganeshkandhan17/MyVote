@@ -14,13 +14,11 @@
   function validate(){
     let pass=document.getElementById("pass").value;
     let conpass=document.getElementById("conpass").value;
-    if(pass==conpass){
-      return true;
-    }
-    else{
+    if(pass!==conpass){
       alert("Password and Confirm password are not same");
       return false;
     }
+     return true;
   }
 </script>
 
