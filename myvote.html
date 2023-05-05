@@ -36,7 +36,7 @@
         left:50%;
         transform:translateX(-50%);
         width: 80%;
-        height: 40%;
+        padding-bottom: 15px;
         border-radius: 10px;
         margin-top: 1cm;
         background-color: rgba(245, 245, 245, 0.877);
@@ -65,39 +65,49 @@
     background-color: antiquewhite;
     border-radius: 50px;
   }
-  button{
+  .inbtn{
     border:none;
-    outline: none;
     background-color: white;
     width:150px;
     margin-top:20px;
     border-radius: 10px;
   }
-.navbar-toggler,.navbar-toggler-icon{
+  .navbar-toggler{
     border:none;
-    outline:none;
   }
     </style>
 </head>
-<body class="container">
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="/">Logo</a>
-
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#closethedoor">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-  <div class="collapse navbar-collapse" id="closethedoor" >
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a href="#" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<body class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/"><image src="logo.png" height="30"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#closethedoor">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="closethedoor" >
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Create</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <image src="profile.png" height="25">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Log Out</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
         <div id="box">
           <div>
               <h1 style="margin-top: 10px;">Create Pool</h1>
@@ -105,7 +115,7 @@
                 <input style="margin-right:5px;" id="input" type="text" name="adminname" placeholder="Admin name" required>
                 <input style="margin-left:5px;" id="input" type="email" name="email" placeholder="Email" required><br>
                 <input id="input" type="number" placeholder="No of poll"required><br>
-                <button class="button" type="submit">Submit</button>
+                <button style="height:35px" class="inbtn" type="submit">Submit</button>
               </form>
               
           </div>
