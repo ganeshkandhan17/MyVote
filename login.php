@@ -34,7 +34,7 @@ if(mysqli_num_rows($result)>=1)
 {
   //user is stored to session and forward next page
   $_SESSION["myuser"]=$finaluser;
-  header("Location:index.html");
+  header("Location:myvote.html");
 }else{
   //error is shown
   $_SESSION["error"]="you are not valid user";
