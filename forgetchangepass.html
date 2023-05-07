@@ -57,19 +57,27 @@ a{
   color: black;
 }
 </style>
+<script>
+function validate(){
+    let pass=document.getElementById("pass").value;
+    let conpass=document.getElementById("conpass").value;
+    if(pass!==conpass){
+      alert("Password and Confirm password are not same");
+      return false;
+    }
+     return true;
+  }
+</script>
 </head>
 <body>
   <div class="row">
     <div class="col">
       <div id="box1">
-        <h1 style="margin-top: 20px; color: white;">Forget Password</h1>
-        <form action="unconspage.html" method="get">
-          <input type="text" placeholder="Email" required>
-          <button type="submit" style="margin-top:20px">Send OTP</button>
-        </form><br>
-        <form action="forgetchangepass.html" method="get">
-            <input type="number" placeholder="OTP" required>
-            <button type="submit" style="margin-top:20px;">Change password</button>
+        <h1 style="margin-top: 20px; color: white;">Change Password</h1>
+        <form action="unconspage.html" method="post" onsubmit="return validate()">
+          <input style="margin-top: 10px;" name="password" type="password" id="pass" placeholder="Password" required >
+          <input style="margin-top: 10px;" name="confirmpassword" type="password" id="conpass" placeholder="Confirm Password" required><br>
+          <button type="submit">Submit</button>
         </form>
       </div>
       </div>
