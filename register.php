@@ -10,10 +10,10 @@ if($password==$confirmpassword){
 if (!empty($number) || !empty($email) || !empty($password) || !empty($confirmpassword) )
 {
 
-$host = "sql312.epizy.com";
-$dbusername = "epiz_34111150";
-$dbpassword = "uhrUzEhmDiwG7F";
-$dbname = "epiz_34111150_home";
+$host = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "vote";
 
 
 

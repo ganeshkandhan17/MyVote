@@ -59,41 +59,14 @@ a{
 </head>
 
 <body>
-  <?php
-
- $connect=mysqli_connect("localhost","root", "", "phpclasses") or die("Connection Failed");
- if(!empty($_POST['save']))
-{
-$email=$_POST['Email'];
-
-$password=$_POST['Password'];
-
-$query="select * from register where email='$email and password='$password"";
-$result=mysqli_query($connect, $query);
-
-
-$count=mysqli_num_rows($result);
-
-if($count>0)
-
-{
-
-echo "Login Successful";
-}
-else
-{
-echo "Login not successful";
-}
-}
-?>
   <div class="row">
     <div class="col">
       <div id="box1">
         <h1 style="margin-top: 20px; color: white;">Sign In</h1>
-        <form method="post">
-          <input type="text" placeholder="Email" required>
-          <input style="margin-top: 20px;" type="password" placeholder="Password" required><br>
-          <button type="submit" style="margin-top:35px">Sign In</button>
+        <form action="login.php" method="post">
+          <input type="text" placeholder="Email" name="email" required>
+          <input style="margin-top: 20px;" type="password" placeholder="Password"  name="password" required><br>
+          <a href="myvote.html"><button type="submit" style="margin-top:35px">Sign In</button></a>
         </form>
         <a href="forget.html"><button style="margin-top:15px; width:170px;">Forget Password</button></a><br>
         <a href="SignUp.html"><button style="margin-top:15px; width:140px;">Sign Up</button></a>

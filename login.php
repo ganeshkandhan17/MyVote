@@ -3,7 +3,7 @@
 
 //connection form and mysql server
 
-$con=mysqli_connect("sql312.epizy.com","epiz_34111150","uhrUzEhmDiwG7F","epiz_34111150_home");
+$con=mysqli_connect("localhost","root","","vote");
 
 //user name password receive login page
 
@@ -21,7 +21,7 @@ $finalpass = htmlspecialchars($passstrip);
 
 //comparision user input and data base
 
-$sql = "SELECT * FROM register where email='$finaluser' AND confirmpassword = '$finalpass'";
+$sql = "SELECT * FROM register where email='$finaluser' AND password = '$finalpass'";
 
 //sql request excuted
 $result = mysqli_query($con,$sql);
