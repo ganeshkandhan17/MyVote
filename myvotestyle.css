@@ -20,15 +20,16 @@
      }
 
   #box{
-        position:absolute;
+        position:relative;
         left:50%;
         transform:translateX(-50%);
         width: 80%;
         padding-bottom: 15px;
-        border-radius: 10px;
+        border-radius: 15px;
         margin-top: 2cm;
         background-color: rgba(245, 245, 245, 0.877);
         text-align: center;
+        padding-top: 10px;
      }
 
   #relative{
@@ -90,3 +91,35 @@
     /* font-weight: bold; */
     font-size: 20px;
   }
+ #analysisbox{
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  width: 80%;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  margin-top: 1.25cm;
+  background-color: rgba(245, 245, 245, 0.877);
+  text-align: center;
+  padding-top: 10px;
+margin-bottom: 10cm;
+ } 
+ #timerbox{
+  display:flex;
+  justify-content: center;
+  margin-top: .25cm;
+ }
+ .box1, .box2{
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+  height: 2cm;
+  width: 2cm;
+  border-radius:20px;
+ }
+ #minute, #hour{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 40px;
+ }

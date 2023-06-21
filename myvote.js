@@ -11,7 +11,7 @@ window.onload=function(){
         list.appendChild(intag);
     }
 }
-    let del=document.getElementById("delet");
+    let del=document.getElementById("delete");
     del.addEventListener("click",delet);
     function delet(){
         try{
@@ -28,5 +28,10 @@ window.onload=function(){
     //     let delet=document.querySelector("#list");
     //     delet.remove()
     // }
+    let resultpage1=document.getElementById("result");
+    resultpage1.addEventListener("click",resultpage);
+    function resultpage(){
+        window.location.href="result.html"
+    }
     
 }

@@ -45,13 +45,16 @@
       </div>
     </nav>
         <div id="box">
+          <h1></h1>
               <h1 style="margin-top: 10px;">Create Pool</h1>
               <form id="createpool" action="#" method="post">
                 <input style="margin-right:5px;" id="input1" type="text" name="adminname" placeholder="Admin name" required>
                 <input style="margin-left:5px;" id="input2" type="Password" name="email" placeholder="Password" required><br>
                 <input id="input3" type="number" placeholder="No of poll"required><br>
+                <p style="margin: 0; margin-top: 15px;">Time Upto</p>
+                <input style="margin-top:0;"type="time" id="time"><br>
                 <button style="margin-bottom:20px;height:35px" type="button"class="inbtn" id="create">Preview</button>
-                <button style="margin-bottom:20px;height:35px" type="button"class="inbtn" id="delet">Delet</button><br>
+                <button style="margin-bottom:20px;height:35px" type="button"class="inbtn" id="delete">Delete</button><br>
                 <ul id="list">
                   
                 </ul>
@@ -59,6 +62,25 @@
                 <!-- <button style="margin-top:0;height:35px" type="reset" id="reset"class="inbtn">Reset</button> -->
                 </div>
               </form>
+              <div id="analysisbox" class="disabled">
+                <h1>Analysis</h1>
+                <h5 style="margin-top:25px;letter-spacing: 5px;">Time Remaining</h5>
+                <div id="timerbox">
+                  <div class="box1">
+                    <p id="hour">20</p>
+                    <p>hour</p>
+                  </div>
+                  <div class="box2">
+                    <p id="minute">10</p>
+                    <p>minute</p>
+                  </div>
+                </div>
+                <button href="result.html"style=" margin-top: 40px;height: 40px;"class="inbtn" id="result">Result</button>
+                <div>
+
+
+                </div>
+              </div>
         </div>
 
 </body>
