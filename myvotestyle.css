@@ -1,0 +1,92 @@
+  body{
+        background-image: url(bg1.png);
+        background-attachment: fixed;
+        height: 100vh;
+        width: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+  .navbar{
+        background-color: rgba(245, 245, 245, 0.566);
+        border-radius: 0 0 10px 10px;
+      }
+  a{
+        font-weight: bold;
+        font-size: 15px;
+      }
+  .absolute{
+        position:absolute;
+     }
+
+  #box{
+        position:absolute;
+        left:50%;
+        transform:translateX(-50%);
+        width: 80%;
+        padding-bottom: 15px;
+        border-radius: 10px;
+        margin-top: 2cm;
+        background-color: rgba(245, 245, 245, 0.877);
+        text-align: center;
+     }
+
+  #relative{
+      position: relative;
+     }
+     
+  input{
+    height:45px;
+    width:200px;
+    text-align:center;
+    padding: 0 5px 0 5px 0;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius:10px;
+  }
+  .dropdown-menu{
+    background-color: rgba(245, 245, 245, 0.566);
+    border-radius: 10px;
+  }
+  .dropdown{
+    margin-right:100px;
+  }
+  input:focus{
+    background-color: #06d3d311;
+  }
+
+  button:hover{
+    background-color: antiquewhite;
+    border-radius: 50px;
+  }
+  .inbtn{
+    border:none;
+    background-color: white;
+    width:150px;
+    margin-top:20px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right:5px;
+  }
+  .navbar-toggler{
+    border:none;
+  }
+  #poolin{
+    margin:0;
+    width: 10cm;
+    margin-bottom: 20px
+  }
+  #list{
+    list-style-type: none;
+    position: relative;
+    left:50%;
+    transform: translate(-52%);
+  }
+  #label{
+    margin: 0;
+  }
+  p{
+    /* font-weight: bold; */
+    font-size: 20px;
+  }
