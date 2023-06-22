@@ -1,23 +1,30 @@
 <?php
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\PHPMailer;
-require("vendor/autoload.php");
-$mail =new PHPMailer;
-$mail->isSMTP();
-$mail->SMTPDebug =3;
-$mail ->SMTPSecure="tls";
-$mail ->Port=587;
-$mail ->SMTPAuth = true;
-$mail->Host="smtp.gmail.com";
-$mail->Username="myrightsmyvote@gmail.com" ;
-$mail->Password="bzwrdeibuxijbbpq";
-$mail->setFrom("myrightsmyvote@gmail.com");
-$mail->addAddress("purushothamanjerry03@gmail.com");
-$mail->Subject ="I am from your wepsite ";
-$mail->Body="Hi friends";
-if($mail->send()){
-	echo "Mail sent successfully";
+
+$con=new mysqli('localhost','root','','myvote');
+if($con->connect_errno)
+{
+    echo $con->connect_error;
+    die();
 }
+
+$an=$_POST['adminname'];
+$npass=$_POST['pass'];
+$npol=$_POST['pol'];
+//${'p'.$i}=$_POST['pool'.$i];
+//echo ${'p'.$i};
+
+$sql="CREATE TABLE $an(adminname VARCHAR(50), PASSWOR VARCHAR(50))";
+$mysqli="INSERT INTO $an (adminname, PASSWOR) VALUES ('$an', '$npass')";
+$result = $con->query($sql);
+$out= $con->query($mysqli);
+
+for($i=1;$i<=$npol;$i++){
+    ${'p'.$i}=$_POST['pool'.$i];
+$mysql="ALTER TABLE $an ADD ${'p'.$i} VARCHAR (50) NOT NULL";
+$put=$con->query($mysql);
+}
+
+
+
 
 ?>
