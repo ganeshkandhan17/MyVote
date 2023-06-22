@@ -7,7 +7,7 @@ window.onload=function(){
         for(let i=0;i<len;i++){
         let intag=document.createElement("li");
         let list=document.getElementById("list");
-        intag.innerHTML="<p id='label'> Pool - "+(i+1)+"</p><input id='poolin' type='text'>"
+        intag.innerHTML="<p id='label'> Pool - "+(i+1)+"</p><input name='pool"+(i+1)+"'id='poolin' type='text'>"
         list.appendChild(intag);
     }
 }
