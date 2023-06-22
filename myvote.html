@@ -9,12 +9,84 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="myvote.js" defer></script>
-    <link rel="stylesheet" href="myvotestyle.css">
- </head>
- <body class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <a class="navbar-brand" href="index.html"><image src="logo.png" height="30"></a>
+    <!-- Bootstrarp -->
+    <style>
+  body{
+        background-image: url(bg1.png);
+        height: 100vh;
+        width: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+  .navbar{
+        background-color: rgba(245, 245, 245, 0.566);
+        border-radius: 0 0 10px 10px;
+      }
+  a{
+        font-weight: bold;
+        font-size: 15px;
+      }
+  .absolute{
+        position:absolute;
+     }
+
+  #box{
+        position:absolute;
+        left:50%;
+        transform:translateX(-50%);
+        width: 80%;
+        padding-bottom: 15px;
+        border-radius: 10px;
+        margin-top: 1cm;
+        background-color: rgba(245, 245, 245, 0.877);
+        text-align: center;
+     }
+
+  #relative{
+      position: relative;
+     }
+     
+  input{
+    height:45px;
+    width:200px;
+    text-align:center;
+    padding: 0 5px 0 5px 0;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius:10px;
+  }
+  .dropdown-menu{
+    background-color: rgba(245, 245, 245, 0.566);
+    border-radius: 10px;
+  }
+  .dropdown{
+    margin-right:100px;
+  }
+  input:focus{
+    background-color: #06d3d311;
+  }
+
+  button:hover{
+    background-color: antiquewhite;
+    border-radius: 50px;
+  }
+  .inbtn{
+    border:none;
+    background-color: white;
+    width:150px;
+    margin-top:20px;
+    border-radius: 10px;
+  }
+  .navbar-toggler{
+    border:none;
+  }
+    </style>
+</head>
+<body class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/"><image src="logo.png" height="30"></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#closethedoor">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,42 +117,16 @@
       </div>
     </nav>
         <div id="box">
-          <h1></h1>
+          <div>
               <h1 style="margin-top: 10px;">Create Pool</h1>
-              <form id="createpool" action="#" method="post">
-                <input style="margin-right:5px;" id="input1" type="text" name="adminname" placeholder="Admin name" required>
-                <input style="margin-left:5px;" id="input2" type="Password" name="email" placeholder="Password" required><br>
-                <input id="input3" type="number" placeholder="No of poll"required><br>
-                <p style="margin: 0; margin-top: 15px;">Time Upto</p>
-                <input style="margin-top:0;"type="time" id="time"><br>
-                <button style="margin-bottom:20px;height:35px" type="button"class="inbtn" id="create">Preview</button>
-                <button style="margin-bottom:20px;height:35px" type="button"class="inbtn" id="delete">Delete</button><br>
-                <ul id="list">
-                  
-                </ul>
-                <button style="margin-top:0;height:35px" type="submit" class="inbtn">Submit</button>
-                <!-- <button style="margin-top:0;height:35px" type="reset" id="reset"class="inbtn">Reset</button> -->
-                </div>
+              <form action="unconspage.html" method="post">
+                <input style="margin-right:5px;" id="input" type="text" name="adminname" placeholder="Admin name" required>
+                <input style="margin-left:5px;" id="input" type="email" name="email" placeholder="Email" required><br>
+                <input id="input" type="number" placeholder="No of poll"required><br>
+                <button style="height:35px" class="inbtn" type="submit">Submit</button>
               </form>
-              <div id="analysisbox" class="disabled">
-                <h1>Analysis</h1>
-                <h5 style="margin-top:25px;letter-spacing: 5px;">Time Remaining</h5>
-                <div id="timerbox">
-                  <div class="box1">
-                    <p id="hour">20</p>
-                    <p>hour</p>
-                  </div>
-                  <div class="box2">
-                    <p id="minute">10</p>
-                    <p>minute</p>
-                  </div>
-                </div>
-                <button href="result.html"style=" margin-top: 40px;height: 40px;"class="inbtn" id="result">Result</button>
-                <div>
-
-
-                </div>
-              </div>
+              
+          </div>
         </div>
 
 </body>

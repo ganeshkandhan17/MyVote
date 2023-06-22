@@ -1,0 +1,6 @@
+$sql = ""UPDATE register SET confirmpassword = '$password', password = '$password' WHERE email='$gmail'";;
+$result = $con->query($sql);
+if ($result->num_rows > 0) {
+   //output data of each row
+  while($row = $result->fetch_assoc()) {
+   //echo  $row["password"]. "<br>";

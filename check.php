@@ -56,7 +56,7 @@ try {
     $mail->AltBody = 'hello world';
 
     $mail->send();
-    echo 'Message has been sent';
+    echo '<script>alert("your Password has sent to your mail .use to login,after change the password")</script>';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }

@@ -74,11 +74,11 @@ function validate(){
     <div class="col">
       <div id="box1">
         <h1 style="margin-top: 20px; color: white;">Change Password</h1>
-        <form action="unconspage.html" method="post" onsubmit="return validate()">
-          <input name="currentpassword" type="password" placeholder="Current password" required>
-          <input style="margin-top: 10px;" name="newpassword" type="password" id="pass" placeholder="New Password" required >
-          <input style="margin-top: 10px;" name="newconfirmpassword" type="password" id="conpass" placeholder="Confirm Password" required><br>
-          <button type="submit">Submit</button>
+        <form action="newpas.php" method="post">
+          <input type="text" name="number" placeholder="Mobile number" required>
+          <input style="margin-top: 10px;" name="oldpassword" type="password" id="pass" placeholder="Old Password" required >
+          <input style="margin-top: 10px;" name="newpassword" type="password" id="conpass" placeholder="New Password" required><br>
+          <button type="submit" value="submit">Submit</button>
         </form>
       </div>
       </div>
