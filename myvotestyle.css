@@ -102,7 +102,7 @@
   background-color: rgba(245, 245, 245, 0.877);
   text-align: center;
   padding-top: 10px;
-margin-bottom: 10cm;
+  margin-bottom: 10cm;
  } 
  #timerbox{
   display:flex;
@@ -116,7 +116,7 @@ margin-bottom: 10cm;
   width: 2cm;
   border-radius:20px;
  }
- #minute, #hour{
+ #min, #sec{
   position: relative;
   top: 50%;
   left: 50%;
