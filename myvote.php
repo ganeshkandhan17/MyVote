@@ -38,6 +38,11 @@
         $put=$con->query($mysql);
         }
 
+
+        // for ($j = 1; $j <= $npol; $j++) {
+        //     echo "<p style='text-align: center;'>" . ${'p'.$j} . "<br></p>";
+        // }
+
 ?>
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a class="navbar-brand" href="index.html"><image src="logo.png" height="30"></a>
@@ -75,22 +80,24 @@
         <div id="box">
           <h1></h1>
               <h1 style="margin-top: 10px;">Create Pool</h1>
-              <form id="createpool" action="#" method="post">
-                <input style="margin-right:5px;" id="input1" type="text" name="adminname" placeholder="Admin name" required>
-                <input style="margin-left:5px;" id="input2" type="Password" name="email" placeholder="Password" required><br>
-                <input id="input3" type="number" placeholder="No of poll"required><br>
-                <p style="margin: 0;letter-spacing:10px; margin-top: 15px;">Time in min</p>
-                <input style="margin-top:5px;"type="number" min="0" max="60" id="time"><br>
-                <button style="margin-bottom:20px;height:35px" type="button"class="inbtn" id="create">Preview</button>
-                <button style="margin-bottom:20px;height:35px" type="button"class="inbtn" id="delete">Delete</button><br>
-                <ul id="list">
-                  
-                </ul>
-                <button style="margin-top:0;height:35px" type="submit" class="inbtn">Submit</button>
-                <button style="margin-top:0;height:35px" type="reset" id="reset"class="inbtn">Reset</button>
+              <?php
+                    $an=$_POST['adminname'];
+                    $npass=$_POST['pass'];
+                    $npol=$_POST['pol'];
+                    $tn=$_POST['tiger'];
+                    echo "<input style='margin-right:5px;' readonly value='$an'>";
+                    echo "<input style='margin-left:5px;' readonly value='$npass'><br>";
+                    echo "<input readonly value='$npol'><br>";
+                    echo "<p style='margin: 0;letter-spacing:10px; margin-top: 15px;'>Time in min</p>";
+                    echo "<input style='margin-top:5px;' readonly value='$tn'><br>";
+              ?>
+                <button style="margin-bottom:20px;height:35px" type="button" class="inbtn" id="create" disabled>Preview</button>
+                <button style="margin-bottom:20px;height:35px" type="button" class="inbtn" id="delete" disabled>Delete</button><br>
+                <button style="margin-top:0;height:35px" type="submit" class="inbtn" disabled>Submit</button>
+                <button style="margin-top:0;height:35px" type="reset" id="reset"class="inbtn" disabled>Reset</button>
                 </div>
               </form>
-              <div id="analysisbox" class="disabled">
+              <div id="analysisbox">
                 <h1>Analysis</h1>
                 <h5 style="margin-top:25px;letter-spacing: 5px;">Time Remaining</h5>
                 <div id="timerbox">
