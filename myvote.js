@@ -62,5 +62,5 @@ window.onload=function(){
     function resultpage(){
         window.location.href="result.html"
     }
-    
+   
 }

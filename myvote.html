@@ -54,17 +54,17 @@
                 <input style="margin-left:5px;" id="input2" type="Password" name="pass" placeholder="Password" required><br>
                 <input id="input3" name="pol"type="number" placeholder="No of poll"required><br>
                 <p style="margin: 0;letter-spacing:10px; margin-top: 15px;">Time in min</p>
-                <input style="margin-top:5px;"type="number" name="tiger" min="0" max="60" id="time"><br>
+                <input style="margin-top:5px;"type="number" name="tiger" max="60" id="time"><br>
                 <button style="margin-bottom:20px;height:35px" type="button"class="inbtn" id="create">Preview</button>
                 <button style="margin-bottom:20px;height:35px" type="button"class="inbtn" id="delete">Delete</button><br>
                 <ul id="list">
                   
                 </ul>
-                <button style="margin-top:0;height:35px" type="submit" class="inbtn">Submit</button>
+                <button style="margin-top:0;height:35px" id="submit" type="submit" class="inbtn">Submit</button>
                 <button style="margin-top:0;height:35px" type="reset" id="reset"class="inbtn">Reset</button>
                 </div>
               </form>
-              <div id="analysisbox" class="disabled">
+              <div id="analysisbox">
                 <h1>Analysis</h1>
                 <h5 style="margin-top:25px;letter-spacing: 5px;">Time Remaining</h5>
                 <div id="timerbox">
@@ -77,10 +77,8 @@
                     <p>Sec</p>
                   </div>
                 </div>
-                <button href="result.html"style=" margin-top: 40px;height: 40px;"class="inbtn" id="result">Result</button>
+                <button href="result.html"style=" margin-top: 40px;height: 40px;"class="inbtn" id="result" disabled>Result</button>
                 <div>
-
-
                 </div>
               </div>
         </div>

@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="myvote.js" defer></script>
+    <script src="timer.js" defer></script>
     <link rel="stylesheet" href="myvotestyle.css">
  </head>
  <body class="container-fluid">
@@ -85,11 +86,14 @@
                     $npass=$_POST['pass'];
                     $npol=$_POST['pol'];
                     $tn=$_POST['tiger'];
-                    echo "<input style='margin-right:5px;' readonly value='$an'>";
-                    echo "<input style='margin-left:5px;' readonly value='$npass'><br>";
-                    echo "<input readonly value='$npol'><br>";
+                    echo "<p style='display:inline; margin-right:30px; margin-top:30px;letter-spacing: 5px;'>Admin Name</p>";
+                    echo "<p style='display: inline; margin-top:30px; margin-left:30px;letter-spacing: 5px;'>Password</p><br>";
+                    echo "<input style='display:inline; margin-top: 5px; margin-right:5px;' readonly value='$an'>";
+                    echo "<input style='display:inline; margin-top: 5px;margin-left:5px;' readonly value='$npass'><br>";
+                    echo "<p style='margin-top:15px;margin-bottom: 5px;letter-spacing: 5px;'>No of Pools</p>";
+                    echo "<input style='margin-top:0px' readonly value='$npol'><br>";
                     echo "<p style='margin: 0;letter-spacing:10px; margin-top: 15px;'>Time in min</p>";
-                    echo "<input style='margin-top:5px;' readonly value='$tn'><br>";
+                    echo "<input style='margin-top:5px;' id='minute' readonly value='$tn'><br>";
               ?>
                 <button style="margin-bottom:20px;height:35px" type="button" class="inbtn" id="create" disabled>Preview</button>
                 <button style="margin-bottom:20px;height:35px" type="button" class="inbtn" id="delete" disabled>Delete</button><br>
@@ -110,9 +114,9 @@
                     <p>Sec</p>
                   </div>
                 </div>
-                <button href="result.html"style=" margin-top: 40px;height: 40px;"class="inbtn" id="result">Result</button>
+                <button href="result.html"style="margin-top: 40px;height: 40px;"class="inbtn" id="result" disabled>Result</button>
                 <div>
-        <h1>$an</h1>
+
 
                 </div>
               </div>
