@@ -11,6 +11,21 @@ $admin = $_POST['adminname'];
 $query = "SELECT * FROM $admin";
 $result = mysqli_query($con, $query);
 
+$myquery = "SELECT pol FROM $admin";
+$res = $con->query($myquery);
+
+if ($res->num_rows > 0) {
+    // Fetch each row and store the data in a PHP variable
+    while ($row = $res->fetch_assoc()) {
+        $jet = $row['pol'];
+        
+        // Do something with the fetched data
+        echo $jet. "<br>";
+    }
+} else {
+    echo "No results found";
+}
+
 if (mysqli_num_rows($result) > 0) {
     echo "<table>";
     
@@ -35,20 +50,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "No records found.";
 }
 
-$myquery = "SELECT pol FROM $admin";
-$res = $con->query($myquery);
 
-if ($res->num_rows > 0) {
-    // Fetch each row and store the data in a PHP variable
-    while ($row = $res->fetch_assoc()) {
-        $jet = $row['pol'];
-        
-        // Do something with the fetched data
-        echo $jet. "<br>";
-    }
-} else {
-    echo "No results found";
-}
 
 
 $pass = $_POST['password'];
