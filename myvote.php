@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyVote</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="myvote.js" defer></script>
@@ -28,8 +28,8 @@
   //      ${'p'.$i}=$_POST['pool'.$i];
   //      echo ${'p'.$i};
 
-        $sql="CREATE TABLE $an(adminname VARCHAR(50), PASSWOR VARCHAR(50))";
-        $mysqli="INSERT INTO $an (adminname, PASSWOR) VALUES ('$an', '$npass')";
+        $sql="CREATE TABLE $an(adminname VARCHAR(50), PASSWOR VARCHAR(50),pol VARCHAR(50),user VARCHAR(50))";
+        $mysqli="INSERT INTO $an (adminname, PASSWOR ,pol) VALUES ('$an', '$npass','$npol')";
         $result = $con->query($sql);
         $out= $con->query($mysqli);
 
