@@ -1,0 +1,49 @@
+body{
+    background-image: url(bg1.png);
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+.navbar{
+    background-color: rgba(245, 245, 245, 0.566);
+    border-radius: 0 0 10px 10px;
+  }
+  a{
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .dropdown-menu{
+    background-color: rgba(245, 245, 245, 0.566);
+    border-radius: 10px;
+  }
+  .dropdown{
+    margin-right:100px;
+  }
+  .navbar-toggler{
+    border:none;
+  }
+  table{
+    margin-top:2cm;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 20px;
+  }
+  td{
+    height: 1.5cm;
+    font-size: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  th{
+    height: 2cm;
+    font-size: 25px;
+    background-color: rgb(214, 214, 214);
+    border-radius: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }

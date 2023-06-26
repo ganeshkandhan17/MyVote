@@ -114,7 +114,7 @@
                     <p>Sec</p>
                   </div>
                 </div>
-                <button href="result.html"style="margin-top: 40px;height: 40px;"class="inbtn" id="result" disabled>Result</button>
+                <button href="result.php"style="margin-top: 40px;height: 40px;"class="inbtn" id="result" disabled>Result</button>
                 <div>
 
 
