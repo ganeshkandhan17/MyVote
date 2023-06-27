@@ -94,7 +94,7 @@
                           echo "<input id='hidden' readonly hidden name='adminname' value='".$admin."'>";
                           echo "<input id='hidden' readonly hidden name='password' value='".$pass."'>";
                           for ($i = 4; $i < count($fields); $i++) {
-                              echo "<button id='votingbutton' name='pool".($i-3)."' value=".$fields[$i]->name."'>",$fields[$i]->name,"</button>";
+                              echo "<button id='votingbutton' name='selected' value=".$fields[$i]->name."'>",$fields[$i]->name,"</button>";
                           }
                           // Fetch and display the data
                       } else {
