@@ -47,19 +47,20 @@
     border-radius:10px;
   }
   .dropdown-menu{
-    background-color: rgba(245, 245, 245, 0.566);
+    background-color: rgb(241, 241, 241);
     border-radius: 10px;
   }
   .dropdown{
     margin-right:100px;
   }
   input:focus{
-    background-color: #06d3d311;
+    background-color: #eeeeee;
+    outline: 2px solid rgba(59, 232, 255, 0.9);
   }
 
   button:hover{
-    background-color: antiquewhite;
-    border-radius: 50px;
+    background-color: #eeeeee;
+    outline:1.5px solid rgba(59, 232, 255, 0.9);
   }
   .inbtn{
     border:none;
@@ -75,7 +76,7 @@
   }
   #poolin{
     margin:0;
-    width: 10cm;
+    width: 60%;
     margin-bottom: 20px
   }
   #list{
