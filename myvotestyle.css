@@ -18,19 +18,19 @@
   .absolute{
         position:absolute;
      }
-
-  #box{
-        position:relative;
-        left:50%;
-        transform:translateX(-50%);
-        width: 80%;
-        padding-bottom: 15pxz;
-        border-radius: 15px;
-        margin-top: 2cm;
-        background-color: rgba(245, 245, 245, 0.877);
-        text-align: center;
-        padding-top: 10px;
-     }
+     #box{
+      position:relative;
+      left:50%;
+      transform:translate(-50%);
+      width: 80%;
+      padding-bottom: 15px;
+      border-radius: 15px;
+      margin-top: 2cm;
+      background-color: rgba(245, 245, 245, 0.877);
+      text-align: center;
+      padding-top: 10px;
+   }
+  
 
   #relative{
       position: relative;
