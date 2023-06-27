@@ -35,3 +35,13 @@ a{
   .dropdown{
     margin-right:100px;
   }
+  #buttons{
+    margin: 1cm;
+    width: 50%;
+    padding: .5cm;
+    border-radius: 25px;
+    border:none;
+  }
+  button:hover{
+    background-color: antiquewhite;
+  }

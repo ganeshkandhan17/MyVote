@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="vote.js" defer></script>
-    <link rel="stylesheet" href="votestyle.css">
+    <link rel="stylesheet" href="votingstyle.css">
  </head>
  <body class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -47,15 +47,12 @@
       </div>
     </nav>
        <div id="box">
-       <div id="list">
-
+        <form action="vote.php" method="post">
+          <?php
+            
+          ?>
+        </form>
        </div>
-       <button onclick="disable()" id="buttons">Hi</button><br>
-       <button onclick="disable()" id="buttons">Hi</button><br>
-       <button onclick="disable()" id="buttons">Hi</button><br>
-       <button onclick="disable()" id="buttons">Hi</button><br>
-       </div>
-       <h1 id="test"></h1>
 
 </body>
 </html>
