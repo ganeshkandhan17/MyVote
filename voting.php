@@ -46,7 +46,7 @@
       </div>
     </nav>
         <div id="box">
-            <form action="countvote.php" method="post">
+            <form action="votecount.php" method="post">
                      <?php
                       $con = new mysqli('localhost', 'root', '', 'myvote');
                       if ($con->connect_errno) {
