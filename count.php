@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Query to fetch data from the 'test' table
-$sql = "SELECT * FROM test";
+$sql = "SELECT * FROM  ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
