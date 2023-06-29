@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyVote</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="myvote.js" defer></script>
@@ -14,37 +14,48 @@
     <link rel="stylesheet" href="myvotestyle.css">
  </head>
  <body class="container-fluid">
-        <?php
-       $con=new mysqli('localhost','root','','myvote');
-        if($con->connect_errno)
-        {
-            echo $con->connect_error;
-            die();
+       <?php
+$con = new mysqli('localhost', 'root', '', 'myvote');
+
+if ($con->connect_errno) {
+    echo "Failed to connect to MySQL: " . $con->connect_error;
+    die();
+}
+
+$an = $_POST['adminname'];
+$sq = "SHOW TABLES LIKE '$an'";
+$reslt = $con->query($sq);
+
+// Check if table exists
+if ($reslt->num_rows > 0) {
+    // Table already exists, display pop-up message or perform any action you want
+    echo '<script>alert("Table already exists"); window.location.href = "myvote.html";</script>';
+} else {
+    $npass = $_POST['pass'];
+    $npol = $_POST['pol'];
+
+    $sql = "CREATE TABLE $an (adminname VARCHAR(50), PASSWOR VARCHAR(50), pol VARCHAR(50), user VARCHAR(50))";
+    $result = $con->query($sql);
+
+    if ($result) {
+        $mysqli = "INSERT INTO $an (adminname, PASSWOR, pol) VALUES ('$an', '$npass', '$npol')";
+        $out = $con->query($mysqli);
+
+        for ($i = 1; $i <= $npol; $i++) {
+            ${'p' . $i} = $_POST['pool' . $i];
+            $mysql = "ALTER TABLE $an ADD ${'p' . $i} VARCHAR(50) NOT NULL";
+            $put = $con->query($mysql);
         }
 
-        $an=$_POST['adminname'];
-        $npass=$_POST['pass'];
-        $npol=$_POST['pol'];
-  //      ${'p'.$i}=$_POST['pool'.$i];
-  //      echo ${'p'.$i};
+        // Table created successfully
+    } else {
+        echo "Error creating table: " . $con->error;
+    }
+}
 
-        $sql="CREATE TABLE $an(adminname VARCHAR(50), PASSWOR VARCHAR(50),pol VARCHAR(50),user VARCHAR(50))";
-        $mysqli="INSERT INTO $an (adminname, PASSWOR ,pol) VALUES ('$an', '$npass','$npol')";
-        $result = $con->query($sql);
-        $out= $con->query($mysqli);
-
-        for($i=1;$i<=$npol;$i++){
-            ${'p'.$i}=$_POST['pool'.$i];
-        $mysql="ALTER TABLE $an ADD ${'p'.$i} VARCHAR (50) NOT NULL";
-        $put=$con->query($mysql);
-        }
-
-
-        // for ($j = 1; $j <= $npol; $j++) {
-        //     echo "<p style='text-align: center;'>" . ${'p'.$j} . "<br></p>";
-        // }
-
+$con->close();
 ?>
+
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a class="navbar-brand" href="index.html"><image src="logo.png" height="30"></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#closethedoor">

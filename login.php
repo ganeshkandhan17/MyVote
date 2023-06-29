@@ -38,6 +38,6 @@ if(mysqli_num_rows($result)>=1)
 }else{
   //error is shown
   $_SESSION["error"]="you are not valid user";
-    echo"user name or password are not valid";
+    echo '<script>alert("user name or password are not valid"); window.location.href = "SignIn.html";</script>';
 }
 ?>
