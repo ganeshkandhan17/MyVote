@@ -3,7 +3,7 @@ window.onload=function(){
     if (typeof(Storage) !== "undefined"){
         let id=localStorage.getItem("id");
         document.getElementById("id").innerHTML=id;
-        document.getElementById("idtrasfer").value=id;
+        document.getElementById("idtransfer").value=id;
         }
     // create 
     let inn=document.getElementById("create");
