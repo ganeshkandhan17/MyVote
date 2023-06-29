@@ -1,7 +1,9 @@
 window.onload=function(){
     // idtansfer
     if (typeof(Storage) !== "undefined"){
-        document.getElementById("id").innerHTML=localStorage.getItem("id");
+        let id=localStorage.getItem("id");
+        document.getElementById("id").innerHTML=id;
+        document.getElementById("idtrasfer").value=id;
         }
     // create 
     let inn=document.getElementById("create");
