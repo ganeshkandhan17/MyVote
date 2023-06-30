@@ -116,12 +116,16 @@ $con->close();
                 </div>
               </form>
               <div id="analysisbox">
+                <form action="result.php" type="post">
+
+                  <?php
+                    echo "<input type='text' name='adminname' hidden value='".$an."'>";
+                    echo "<input type='password' name='password' hidden value='".$npass."'>"
+                  ?>
+
                 <h5 style="margin-top:25px;letter-spacing: 5px;">Result</h5>
-                <button href="result.php"style="margin-top: 40px;height: 40px;"class="inbtn" id="result">Result</button>
-                <div>
-
-
-                </div>
+                <button type="submit" style="margin-top: 40px;height: 40px;" class="inbtn" id="result">Result</button>
+                </form>
               </div>
         </div>
 </body>
