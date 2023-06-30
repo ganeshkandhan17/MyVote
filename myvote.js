@@ -1,4 +1,4 @@
-window.onload=function(){
+// window.onload=function(){
     // idtansfer
         let email=localStorage.getItem("id");
         document.getElementById("id").innerHTML=email;
@@ -56,14 +56,10 @@ window.onload=function(){
             }
     }
     // --------------------
-    let resultpage1=document.getElementById("result");
-    resultpage1.addEventListener("click",resultpage);
-    function resultpage(){
-        window.location.href="result.html"
-    }
-    // let idemail=document.getElementById("id").innerHTML;
+// }
+function idtransfer(){
+    let idemail=document.getElementById("id").innerHTML;
+    document.getElementById("idtrans").value=idemail;
+    console.log(idemail);
+    document.getElementById("submit").removeAttribute("disabled");
 }
-     function idtransfer(){s
-        let idemail=document.getElementById("id").innerHTML;
-        document.getElementById("idtrans").value=idemail;
-      }

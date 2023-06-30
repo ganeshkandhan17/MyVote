@@ -9,8 +9,6 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="myvote.js" defer></script>
-    <script src="timer.js" defer></script>
     <link rel="stylesheet" href="myvotestyle.css">
  </head>
  <body class="container-fluid">
@@ -113,19 +111,8 @@ $con->close();
                 </div>
               </form>
               <div id="analysisbox">
-                <h1>Analysis</h1>
-                <h5 style="margin-top:25px;letter-spacing: 5px;">Time Remaining</h5>
-                <div id="timerbox">
-                  <div class="box1">
-                    <p id="min">00</p>
-                    <p>Min</p>
-                  </div>
-                  <div class="box2">
-                    <p id="sec">00</p>
-                    <p>Sec</p>
-                  </div>
-                </div>
-                <button href="result.php"style="margin-top: 40px;height: 40px;"class="inbtn" id="result" disabled>Result</button>
+                <h5 style="margin-top:25px;letter-spacing: 5px;">Result</h5>
+                <button href="result.php"style="margin-top: 40px;height: 40px;"class="inbtn" id="result">Result</button>
                 <div>
 
 
