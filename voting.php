@@ -46,9 +46,7 @@
       </div>
     </nav>
         <div id="box">
-            <form action="votecount.php" method="post">
-            <input id="email" type="text" placeholder="Email" name="email" required>
-                     <?php
+            <form action="votecount.php" method="post">                     <?php
                       $con = new mysqli('localhost', 'root', '', 'myvote');
                       if ($con->connect_errno) {
                           echo $con->connect_error;
