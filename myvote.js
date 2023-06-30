@@ -14,7 +14,7 @@
             let intag=document.createElement("li");
             intag.id="liitem";
             let list=document.getElementById("list");
-            intag.innerHTML="<p id='label'> Pool - "+(i+1)+"</p><input name='pool"+(i+1)+"'id='poolin' type='text'>"
+            intag.innerHTML="<p id='label'> Pool - "+(i+1)+"</p><input name='pool"+(i+1)+"'id='poolin' type='text' required>"
             list.appendChild(intag);
             }
         }
