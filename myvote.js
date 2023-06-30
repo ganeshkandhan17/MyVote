@@ -1,10 +1,7 @@
 window.onload=function(){
     // idtansfer
-    if (typeof(Storage) !== "undefined"){
-        let id=localStorage.getItem("id");
-        document.getElementById("id").innerHTML=id;
-        document.getElementById("idtransfer").value=id;
-        }
+        let email=localStorage.getItem("id");
+        document.getElementById("id").innerHTML=email;
     // create 
     let inn=document.getElementById("create");
     inn.addEventListener("click",create);
@@ -64,5 +61,9 @@ window.onload=function(){
     function resultpage(){
         window.location.href="result.html"
     }
-   
+    // let idemail=document.getElementById("id").innerHTML;
 }
+     function idtransfer(){s
+        let idemail=document.getElementById("id").innerHTML;
+        document.getElementById("idtrans").value=idemail;
+      }
