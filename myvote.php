@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyVote</title>
     <!-- Bootstrap -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="myvotestyle.css">
@@ -31,6 +31,11 @@ if ($reslt->num_rows > 0) {
 } else {
     $npass = $_POST['pass'];
     $npol = $_POST['pol'];
+    $game = $_POST['id'];
+
+    $connection = new mysqli('localhost', 'root', '', 'vote');
+    $file = "INSERT INTO user (email, adminname, password) VALUES ('$game', '$an', '$npass')";
+$res = $connection->query($file);
 
     $sql = "CREATE TABLE $an (adminname VARCHAR(50), PASSWOR VARCHAR(50), pol VARCHAR(50), user VARCHAR(50))";
     $result = $con->query($sql);

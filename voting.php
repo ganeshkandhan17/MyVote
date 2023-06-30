@@ -61,7 +61,7 @@
                       $checkResult = $con->query($checkQuery);
 
                       if ($checkResult->num_rows > 0) {
-                          echo '<script>alert("Email already exists"); window.location.href = "vote.html";</script>';
+                          echo '<script>alert("Email already exists"); window.location.href = "votinglogin.html";</script>';
                       } else {
                           $myquery = "SELECT * FROM $admin WHERE adminname = '$admin' AND PASSWOR = '$pass'";
                           $resul = mysqli_query($con, $myquery);
@@ -94,7 +94,7 @@
                           echo "<input id='hidden' readonly hidden name='adminname' value='".$admin."'>";
                           echo "<input id='hidden' readonly hidden name='password' value='".$pass."'>";
                           for ($i = 4; $i < count($fields); $i++) {
-                              echo "<button id='votingbutton' name='selected' value=".$fields[$i]->name."'>",$fields[$i]->name,"</button>";
+                              echo "<button id='votingbutton' name='selected' value='".$fields[$i]->name."'>",$fields[$i]->name,"</button>";
                           }
                           // Fetch and display the data
                       } else {
