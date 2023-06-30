@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyVote</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="result.css">
@@ -54,64 +54,82 @@
       </thead>
       <tbody>
                 <?php
-          // Database configuration
-          $servername = "localhost";
-          $username = "root";
-          $password = "";
-          $dbname = "myvote";
 
-          // Create connection
-          $conn = new mysqli($servername, $username, $password, $dbname);
+    // Database configuration
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "myvote";
 
-          // Check connection
-          if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-          }
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-          // Query to fetch data from the 'test' table
-          $sql = "SELECT * FROM  ";
-          $result = $conn->query($sql);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-          if ($result->num_rows > 0) {
-              // Initialize sums array
-              $sums = array();
+    $an = $_POST['adminname'];
+    $pass = $_POST['password'];
 
-              // Fetch column names
-              $fieldinfo = $result->fetch_fields();
-              $columnCount = count($fieldinfo);
-              for ($i = 4; $i < $columnCount; $i++) {
-                  $column = $fieldinfo[$i]->name;
-                  $sums[$column] = 0; // Initialize sum for each column
-              }
+    $myquery = "SELECT * FROM $an WHERE adminname = '$an' AND PASSWOR = '$pass'";
+    $result = mysqli_query($conn, $myquery);
 
-              // Fetch data rows and calculate sums
-              while ($row = $result->fetch_assoc()) {
-                  $values = array_values($row);
-                  for ($i = 4; $i < $columnCount; $i++) {
-                      $value = $values[$i];
-                      // Check if the value is numeric before adding to the sum
-                      if (is_numeric($value)) {
-                          $column = $fieldinfo[$i]->name;
-                          $sums[$column] += $value;
-                      }
-                  }
-              }
+    if ($result) {
+        // Check if a row was found with the provided username and password
+        if (mysqli_num_rows($result) > 0) {
+            // Query to fetch data from the 'test' table
+            $sql = "SELECT * FROM $an ";
+            $result = $conn->query($sql);
 
-              // Display column names and sums
-              foreach ($sums as $column => $sum) {
-                 echo "<tr>";
-                 echo "<td>" .$column. "</td>";
-                 echo "<td>" .$sum. "</td>";
-                 echo "</tr>";
+            if ($result->num_rows > 0) {
+                // Initialize sums array
+                $sums = array();
 
+                // Fetch column names
+                $fieldinfo = $result->fetch_fields();
+                $columnCount = count($fieldinfo);
+                for ($i = 4; $i < $columnCount; $i++) {
+                    $column = $fieldinfo[$i]->name;
+                    $sums[$column] = 0; // Initialize sum for each column
+                }
 
-              }
-          } else {
-              echo "No data found in the 'test' table.";
-          }
+                // Fetch data rows and calculate sums
+                while ($row = $result->fetch_assoc()) {
+                    $values = array_values($row);
+                    for ($i = 4; $i < $columnCount; $i++) {
+                        $value = $values[$i];
+                        // Check if the value is numeric before adding to the sum
+                        if (is_numeric($value)) {
+                            $column = $fieldinfo[$i]->name;
+                            $sums[$column] += $value;
+                        }
+                    }
+                }
 
-          // Close connection
-          $conn->close();
+                // Display column names and sums
+                foreach ($sums as $column => $sum) {
+                    echo "<tr>";
+                    echo "<td>" . $column . "</td>";
+                    echo "<td>" . $sum . "</td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "No data found in the '$an' table.";
+            }
+        } else {
+            // Display an error message if the password is wrong
+            echo '<script>alert("Invalid username or password. Please try again");window.location.href = "resultlogin.html";</script>';
+
+        }
+    } else {
+        echo "Error executing query: " . mysqli_error($conn);
+    }
+
+    // Close connection
+    $conn->close();
+?>
+
           ?>
       </tbody>
 
