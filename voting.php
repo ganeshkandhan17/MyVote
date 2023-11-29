@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <script type="text/javascript">
+    window.history.forward();
+  </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,20 +52,33 @@
     </nav>
         <div id="box">
             <form action="votecount.php" method="post">                     <?php
+
+            
                       $con = new mysqli('localhost', 'root', '', 'myvote');
                       if ($con->connect_errno) {
                           echo $con->connect_error;
                           die();
                       }
+                      $connection = new mysqli('localhost', 'root', '', 'vote');
+
                       $email = $_POST['email'];
                       $admin = $_POST['adminname'];
                       $pass = $_POST['password'];
+                      //check the voting pol present or not
+
+
+
+                      
+                          $tblcheck = "SELECT * FROM user Where adminname = '$admin' AND password = '$pass'";
+                          $table = mysqli_query($connection, $tblcheck);
+                          if ($table->num_rows > 0) {
+                        
                       // Check if the email already exists
                       $checkQuery = "SELECT user FROM $admin WHERE user = '$email'";
                       $checkResult = $con->query($checkQuery);
 
                       if ($checkResult->num_rows > 0) {
-                          echo '<script>alert("Email already exists"); window.location.href = "votinglogin.html";</script>';
+                          echo '<script>alert("you are already voted"); window.location.href = "votinglogin.html";</script>';
                       } else {
                           $myquery = "SELECT * FROM $admin WHERE adminname = '$admin' AND PASSWOR = '$pass'";
                           $resul = mysqli_query($con, $myquery);
@@ -113,8 +131,12 @@
                           } else {
                               // Error executing the query
                               echo "Error: " . mysqli_error($con);
-                          }
+                          }}
                       }
+                    else {
+                      echo '<script>alert("Invalid  credentials"); window.location.href = "votinglogin.html";</script>';
+
+                    }
                       $con->close();
                       ?>
 

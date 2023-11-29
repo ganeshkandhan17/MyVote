@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyVote</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">   
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="result.css">
@@ -68,11 +68,14 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+$an = isset($_GET['adminname']) ? $_GET['adminname'] : '';
+$pass = isset($_GET['password']) ? $_GET['password'] : '';
 
-    $an = $_POST['adminname'];
-    $pass = $_POST['password'];
+//echo $an;
+//echo $pass;
 
-    $myquery = "SELECT * FROM $an WHERE adminname = '$an' AND PASSWOR = '$pass'";
+    
+    $myquery = "SELECT * FROM $an Where adminname = '$an' AND PASSWOR = '$pass'";
     $result = mysqli_query($conn, $myquery);
 
     if ($result) {
@@ -128,9 +131,10 @@
 
     // Close connection
     $conn->close();
+
 ?>
 
-          ?>
+          
       </tbody>
 
     </table>

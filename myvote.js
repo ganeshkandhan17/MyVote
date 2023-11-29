@@ -36,10 +36,6 @@
     del.addEventListener("click",delet);
     function delet(){
         try{
-            let in3=document.getElementById("input3");
-            let num=in3.value;
-            num=num-1;
-            in3.value=num;
             let del=document.querySelector("#list li:last-child");
             del.remove();
         }
@@ -67,6 +63,3 @@ function idtransfer(){
     console.log(idemail);
     document.getElementById("submit").removeAttribute("disabled");
 }
- function subdisable(){
-    document.getElementById("submit").setAttribute("disabled","true");
- }

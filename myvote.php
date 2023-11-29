@@ -27,7 +27,7 @@ $reslt = $con->query($sq);
 // Check if table exists
 if ($reslt->num_rows > 0) {
     // Table already exists, display pop-up message or perform any action you want
-    echo '<script>alert("Table already exists"); window.location.href = "myvote.html";</script>';
+    echo '<script>alert("Table name already exists"); window.location.href = "myvote.html";</script>';
 } else {
     $npass = $_POST['pass'];
     $npol = $_POST['pol'];
@@ -51,11 +51,15 @@ $res = $connection->query($file);
         }
 
         // Table created successfully
-    } else {
-        echo "Error creating table: " . $con->error;
-    }
-}
+    } 
 
+   
+ else {
+    // Error executing the query for checking email and password in the 'register' table
+    echo "Error: " . mysqli_error($con);
+    exit();
+}
+}
 $con->close();
 ?>
 
@@ -99,15 +103,14 @@ $con->close();
                     $an=$_POST['adminname'];
                     $npass=$_POST['pass'];
                     $npol=$_POST['pol'];
-                    $tn=$_POST['tiger'];
                     echo "<p style='display:inline; margin-right:30px; margin-top:30px;letter-spacing: 5px;'>Admin Name</p>";
                     echo "<p style='display: inline; margin-top:30px; margin-left:30px;letter-spacing: 5px;'>Password</p><br>";
                     echo "<input style='display:inline; margin-top: 5px; margin-right:5px;' readonly value='$an'>";
                     echo "<input style='display:inline; margin-top: 5px;margin-left:5px;' readonly value='$npass'><br>";
                     echo "<p style='margin-top:15px;margin-bottom: 5px;letter-spacing: 5px;'>No of Pools</p>";
                     echo "<input style='margin-top:0px' readonly value='$npol'><br>";
-                    echo "<p style='margin: 0;letter-spacing:10px; margin-top: 15px;'>Time in min</p>";
-                    echo "<input style='margin-top:5px;' id='minute' readonly value='$tn'><br>";
+                   // echo "<p style='margin: 0;letter-spacing:10px; margin-top: 15px;'>Time in min</p>";
+                   // echo "<input style='margin-top:5px;' id='minute' readonly value='$tn'><br>";
               ?>
                 <button style="margin-bottom:20px;height:35px" type="button" class="inbtn" id="create" disabled>Preview</button>
                 <button style="margin-bottom:20px;height:35px" type="button" class="inbtn" id="delete" disabled>Delete</button><br>
