@@ -30,9 +30,9 @@ MyVote is a simple and responsive voting website created using HTML, CSS, JS, PH
 
 ![image](https://github.com/ganeshkandhan17/MyVote/assets/87404827/2b5cc836-ed96-403c-8b99-cb6d21794d30)
 
-![image](https://github.com/ganeshkandhan17/MyVote/assets/87404827/b53ee974-6651-4a42-942d-e50297810c9b)
+![image](https://github.com/ganeshkandhan17/MyVote/assets/87404827/08d38bc3-8024-44b6-9f16-003462a499c1)
 
-![image](https://github.com/ganeshkandhan17/MyVote/assets/87404827/8bed94b2-d251-4cb1-b13c-7b981435a83b)
+![image](https://github.com/ganeshkandhan17/MyVote/assets/87404827/0f80c16c-f326-4aae-9d2e-80282baa5a32)
 
 
 
