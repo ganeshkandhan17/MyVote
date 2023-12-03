@@ -2,10 +2,10 @@
         background-image: url(bg1.png);
         background-attachment: fixed;
         width: 100vh;
-        background-repeat: no-repeat;
+        background-repeat: repeat-x;
         background-size: cover;
         position: relative;
-        padding-bottom: 1cm;
+        scroll-behavior: smooth;
       }
   .navbar{
         background-color: rgba(245, 245, 245, 0.566);
@@ -23,7 +23,7 @@
       left:50%;
       transform:translate(-50%);
       width: 90%;
-      padding-bottom: 15px;
+      padding-bottom: 30px;
       border-radius: 25px;
       margin-top: 3cm;
       background-color: rgba(245, 245, 245, 0.877);
@@ -41,10 +41,10 @@
     width:200px;
     text-align:center;
     padding: 0 5px 0 5px 0;
-    margin-top: 20px;
     border: none;
     outline: none;
     border-radius:10px;
+    margin: 20px;
   }
   .dropdown-menu{
     background-color: rgb(241, 241, 241);
@@ -71,6 +71,23 @@
     margin-left: 5px;
     margin-right:5px;
   }
+#input2{
+  margin-left:5px;
+}
+#input1{
+  margin-right:5px;
+}
+
+#create{
+  margin-bottom:20px;
+  height:35px;
+}
+
+#delete{
+  margin-bottom:20px;
+  height: 35px;
+}
+
   .navbar-toggler{
     border:none;
   }
@@ -123,3 +140,86 @@
   transform: translate(-50%,-50%);
   font-size: 40px;
  }
+ footer{
+  width: 100%;
+  margin: 0;
+ }
+ #Contact_Us{
+  width:100%; 
+  background-color: rgba(245, 245, 245, 0.877);
+  position: relative;
+  bottom: 0;
+  margin-top: 50px;
+  border-radius: 25px 25px 0 0 ;
+  text-align: center;
+  padding: 20px;
+ }
+ #Contact_Us .container1{
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+ }
+ #Contact_Us img{
+  margin: 0 10px;
+  width:40px;
+ }
+ #About{
+  background-color: rgba(245, 245, 245, 0.877);
+  padding: 20px;
+  text-align: center;
+ }
+ #About p{
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+ }
+ #flex2 ul{
+  text-align: left ;
+ }
+ #flex2{
+  display: flex;
+  justify-content: space-around;
+ }
+@media screen and (min-width:1024px){
+  #box{
+    width: 60%;
+  }
+}
+@media screen and (max-width:420px){
+  #box{
+    padding-bottom:80px ;
+  }
+  #box ul{
+    transform: translateX(-170px);
+  }
+  #input2{
+    transform: translateX(12px);
+  }
+  #input3{
+    transform: translateX(5px);
+  }
+  #reset{
+    transform: translateY(35px);
+  }
+  #Contact_Us h1{
+    font-size: 30px;
+  }
+  #Contact_Us p{
+    font-size: 17px;
+  }
+  #Abouthead{
+    font-size: 30px;
+  }
+  #About p{
+    font-size: 17px;
+    width: 90%;
+  }
+  #techfont{
+    font-size: 30px;
+  }
+  #flex2 h3{
+    font-size: 20px;
+  }
+}

@@ -20,16 +20,16 @@
       <div class="collapse navbar-collapse" id="closethedoor" >
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
+            <a href="index.html" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Create</a>
+            <a class="nav-link" href="https://github.com/ganeshkandhan17/MyVote">Github</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#About">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="#Contact_Us">Contact Us</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -138,5 +138,50 @@ $pass = isset($_GET['password']) ? $_GET['password'] : '';
       </tbody>
 
     </table>
+
  </body>
+ <footer>
+  <div id="Contact_Us">
+        <h1 style="letter-spacing: 5px; margin :10px;">Contact Us</h1>
+    <div class="container1">
+        <div>
+          <p><b>Front-End Developer</b></p>
+          <p id="name">Ganesh Kandhan <br>V M</p>
+          <a href="https://www.linkedin.com/in/ganeshkandhan"><img src="linkedinlogo.png"></a>
+          <a href="https://www.github.com/ganeshkandhan17"><img src="githublogo.png"></a>
+        </div>
+        <div>
+          <p><b>Back-End Developer</b></p>
+          <p id="name">Purushothaman <br>S</p>
+          <a href="https://www.linkedin.com/in/purushothaman-s-076028286/"><img src="linkedinlogo.png"></a>
+          <a href="https://www.github.com/purushothamanjerry"><img src="githublogo.png"></a>
+        </div>
+    </div>
+  </div>
+  <div id="About">
+    <h1 id="Abouthead"style="letter-spacing: 5px; margin :10px;">About</h1>
+    <p>
+      MyVote is a simple and responsive voting website includes features such as user authentication (login and signup), the ability to create and vote on polls, view results, and manage passwords (forget and change password functionalities).<br><a href="https://github.com/ganeshkandhan17/MyVote">Github</a>
+    </p>
+    <h2 id="techfont"style="letter-spacing: 5px; margin: 30px;">Technical Stacks</h2>
+    <div id="flex2">
+      <div>
+        <h3>Front-End</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Java Script</li>
+          <li>Bootstrap</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Back-End</h3>
+        <ul>
+          <li>PHP</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+    </div>
+</div>
+</footer>
 </html>

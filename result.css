@@ -47,3 +47,66 @@ body{
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
+  footer{
+    width: 100%;
+    margin: 0;
+   }
+   #Contact_Us{
+    width:100%; 
+    background-color: rgba(245, 245, 245, 0.877);
+    position: relative;
+    bottom: 0;
+    margin-top: 50px;
+    border-radius: 25px 25px 0 0 ;
+    text-align: center;
+    padding: 20px;
+   }
+   #Contact_Us .container1{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+   }
+   #Contact_Us img{
+    margin: 0 10px;
+    width:40px;
+   }
+   #About{
+    background-color: rgba(245, 245, 245, 0.877);
+    padding: 20px;
+    text-align: center;
+   }
+   #About p{
+    width: 60%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+   }
+   #flex2 ul{
+    text-align: left ;
+   }
+   #flex2{
+    display: flex;
+    justify-content: space-around;
+   }
+   @media screen and (max-width:420px){
+    #Contact_Us h1{
+      font-size: 30px;
+    }
+    #Contact_Us p{
+      font-size: 17px;
+    }
+    #Abouthead{
+      font-size: 30px;
+    }
+    #About p{
+      font-size: 17px;
+      width: 90%;
+    }
+    #techfont{
+      font-size: 30px;
+    }
+    #flex2 h3{
+      font-size: 20px;
+    }
+  }
